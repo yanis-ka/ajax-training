@@ -18,12 +18,13 @@ links.forEach(link => {
                         li.innerHTML = result.name
                         ul.appendChild(li)
                     });    
+                    result.classList.add('cadre')
+                    link.innerHTML = link.innerHTML + ":"
                 } else {
                     alert('Impossible de contacter le server')
                 }
             }
-        }
-                
+        }   
         httpRequest.open('GET', 'https://jsonplaceholder.typicode.com/users', true)
         httpRequest.send()
     })
